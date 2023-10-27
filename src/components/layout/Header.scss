@@ -1,0 +1,77 @@
+@import "src/scss/colors";
+
+header {
+  display: flex;
+  flex-direction: row;
+
+  h1 {
+    font-size: 2.8rem;
+    color: $secondary;
+    text-shadow: 1px 2px black;
+    cursor: pointer;
+    padding: 0.4em;
+    margin: 0.2em;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #172023;
+
+    }
+    &:hover > span{
+      color: $secondary;
+
+    }
+
+    span {
+      font-weight: normal;
+      color: $primary;
+      transition: color 0.3s;
+    }
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1em;
+
+    input {
+      background-color: transparent;
+      font-size: 1.6rem;
+      padding: 4px;
+      border: none;
+      border-radius: 5px;
+      color: $primary;
+      box-shadow: $primary 0 0 3px 0px;
+      transition: box-shadow 0.3s;
+
+      &:hover{
+        box-shadow: $primary 0 0 6px 1px;
+
+      }
+    }
+    button {
+      background-color: $secondary;
+      box-shadow: $primary 0 0 3px 0px;
+      color: $primary;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.6rem;
+      padding: 4px 8px;
+      margin-left: 0.5em;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        color: $secondary;
+        background-color: $primary;
+      }
+
+    }
+  }
+
+
+}
