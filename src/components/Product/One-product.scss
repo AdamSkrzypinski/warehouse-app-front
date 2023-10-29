@@ -1,0 +1,23 @@
+@import "src/scss/colors";
+
+.product-details {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: $primary;
+
+
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+
+  }
+
+
+
+}
+
