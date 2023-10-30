@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AreaEntity } from "../../types/area";
 import { apiUrl } from "../../config/api";
 import { AreasList } from "../../components/Warehouse/Areas-list";
+import { Btn } from "../../components/common/Btn";
 
 export const WarehouseView = () => {
   const [areasList, setAreasList] = useState<AreaEntity[] | null>(null);

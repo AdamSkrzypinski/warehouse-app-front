@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { ProductEntity } from "../../../types/product";
 import { useParams } from "react-router-dom";
+import { ProductEntity } from "../../../types/product";
+import { getProduct } from "../../utils/getProduct";
 import { apiUrl } from "../../../config/api";
 
-export const SinglePlaceView = () => {
+export const DeleteProductView = () => {
   const [product, setProduct] = useState<ProductEntity | null>(null);
 
   const { productId } = useParams();
@@ -11,8 +12,8 @@ export const SinglePlaceView = () => {
   useEffect(() => {
     if (productId) {
       (async () => {
-        const res = await fetch(`${apiUrl}/product/${productId}`);
-        const data = await res.json();
+        const data = await getProduct(productId);
+        console.log(data);
         setProduct(data);
       })();
     }
@@ -21,6 +22,5 @@ export const SinglePlaceView = () => {
   if (product === null) {
     return null;
   }
-
-  return <>{}</>;
+  return <h3>Czy na pewno chcesz usunąć '{product?.name}'?</h3>;
 };

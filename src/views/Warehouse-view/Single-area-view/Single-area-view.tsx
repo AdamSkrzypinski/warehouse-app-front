@@ -4,6 +4,7 @@ import { apiUrl } from "../../../config/api";
 import { Link, useParams } from "react-router-dom";
 import { SinglePlaceView } from "../Single-place-view/Single-place-view";
 import { WarehouseView } from "../Warehouse-view";
+import { Btn } from "../../../components/common/Btn";
 
 export const SingleAreaView = () => {
   const [area, setArea] = useState<AreaEntityWithRelations | null>(null);
@@ -28,7 +29,7 @@ export const SingleAreaView = () => {
     return (
       <div className={"places"}>
         <h2>Strefa jest pusta</h2>
-        <Link to={`/warehouse/`}>Powrót do listy stref</Link>
+        <Btn text={"wstecz"} to={"/warehouse"}></Btn>
       </div>
     );
   }
@@ -44,6 +45,7 @@ export const SingleAreaView = () => {
             </Link>
           ))}
         </div>
+        <Btn text={"wstecz"} to={"/warehouse"}></Btn>
       </div>
     </>
   );

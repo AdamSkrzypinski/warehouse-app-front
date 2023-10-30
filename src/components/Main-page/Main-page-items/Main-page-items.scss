@@ -13,6 +13,8 @@
     cursor: pointer;
     margin: 2em 1em;
     text-decoration: none;
+    box-shadow: $primary 0 0 1px 0px;
+
 
     .tile {
 
@@ -20,6 +22,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
 
       .icon {
         color: $secondary;
@@ -42,7 +45,7 @@
   }
 
   a:hover {
-    transform: scale(1.05);
+    box-shadow: $primary 0 0 2px 0px;
     background-color: $background-hover;
   }
 }

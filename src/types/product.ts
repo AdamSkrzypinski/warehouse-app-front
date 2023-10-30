@@ -5,3 +5,8 @@ export interface ProductEntity {
   measure: string;
   createdAt: Date;
 }
+
+export interface ProductEntityWithRelations extends ProductEntity {
+  productArea: string;
+  productPlace: string;
+}

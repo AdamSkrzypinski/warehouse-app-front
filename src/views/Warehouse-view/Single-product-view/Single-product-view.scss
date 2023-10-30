@@ -1,0 +1,43 @@
+@import "src/scss/colors";
+
+.product-details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 1.8rem;
+  color: $primary;
+
+
+  th, td {
+    padding: 0.5em 0.8em;
+    background-color: $background-hover;
+    margin-bottom: 0.5em;
+  }
+  td{
+    text-align: center;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5em;
+
+    .action-btns, .navigation-btns {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .navigation-btns{
+      margin-top: 10em;
+    }
+
+
+
+  }
+
+}

@@ -8,6 +8,7 @@ import { SingleAreaView } from "./views/Warehouse-view/Single-area-view/Single-a
 import { NotFoundView } from "./views/Not-found-view/Not-found-view";
 import { SingleProductView } from "./views/Warehouse-view/Single-product-view/Single-product-view";
 import { SinglePlaceView } from "./views/Warehouse-view/Single-place-view/Single-place-view";
+import { DeleteProductView } from "./views/Warehouse-view/Delete-product-view/Delete-product-view";
 
 export const App = () => {
   return (
@@ -22,6 +23,10 @@ export const App = () => {
           element={<SinglePlaceView />}
         />
         <Route path={"/warehouse/:productId"} element={<SingleProductView />} />
+        <Route
+          path={"/warehouse/product/delete/:productId"}
+          element={<DeleteProductView />}
+        />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>
