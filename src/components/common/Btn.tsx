@@ -1,4 +1,4 @@
-import React from "react";
+import React, {MouseEventHandler} from "react";
 import { Link } from "react-router-dom";
 import "./Btn.scss";
 
@@ -6,6 +6,7 @@ interface Props {
   text: string;
   to?: string;
   value?: string;
+  btnEvent?: MouseEventHandler;
 }
 
 export const Btn = (props: Props) =>
@@ -14,5 +15,5 @@ export const Btn = (props: Props) =>
       {props.text}
     </Link>
   ) : (
-    <button>{props.text}</button>
+    <button onClick={props.btnEvent}>{props.text}</button>
   );

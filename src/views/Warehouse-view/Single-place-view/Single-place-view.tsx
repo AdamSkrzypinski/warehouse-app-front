@@ -25,6 +25,15 @@ export const SinglePlaceView = () => {
     return null;
   }
 
+  if (place.products.length === 0) {
+    return (
+        <div className={"places"}>
+          <h2>Brak produktów.</h2>
+          <Btn text={"wstecz"} to={`/warehouse/area/${place.placeArea.id}`}></Btn>
+        </div>
+    );
+  }
+
   return (
     <>
       <div className={"places"}>

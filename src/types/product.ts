@@ -10,3 +10,10 @@ export interface ProductEntityWithRelations extends ProductEntity {
   productArea: string;
   productPlace: string;
 }
+
+export interface CreateProductDto {
+  name: string;
+  count: number;
+  measure: string;
+}
+

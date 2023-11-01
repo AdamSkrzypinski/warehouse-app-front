@@ -1,6 +1,6 @@
 @import "src/scss/colors";
 
-.product-details{
+.product-details {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,15 +10,6 @@
   font-size: 1.8rem;
   color: $primary;
 
-
-  th, td {
-    padding: 0.5em 0.8em;
-    background-color: $background-hover;
-    margin-bottom: 0.5em;
-  }
-  td{
-    text-align: center;
-  }
 
   .btns {
     display: flex;
@@ -32,12 +23,41 @@
       width: 100%;
     }
 
-    .navigation-btns{
+    .navigation-btns {
       margin-top: 10em;
     }
 
 
-
   }
+
+}
+
+.dialog-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $background;
+
+  .text-section {
+    margin-top: 5em;
+
+
+    p {
+      padding: 1em;
+      font-size: 2em;
+      color: $primary;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+
+      button{
+        margin-left: 2em;
+      }
+    }
+  }
+
 
 }
