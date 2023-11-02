@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { apiUrl } from "../../../config/api";
 import "./single-place-view.scss";
 import { SingleProductView } from "../Single-product-view/Single-product-view";
-import { Btn } from "../../../components/common/Btn";
+import { Btn } from "../../../components/common/Btn/Btn";
 
 export const SinglePlaceView = () => {
   const [place, setPlace] = useState<PlaceEntityWithRelations | null>(null);
@@ -27,10 +27,10 @@ export const SinglePlaceView = () => {
 
   if (place.products.length === 0) {
     return (
-        <div className={"places"}>
-          <h2>Brak produktów.</h2>
-          <Btn text={"wstecz"} to={`/warehouse/area/${place.placeArea.id}`}></Btn>
-        </div>
+      <div className={"places"}>
+        <h2>Brak produktów.</h2>
+        <Btn text={"wstecz"} to={`/warehouse/area/${place.placeArea.id}`}></Btn>
+      </div>
     );
   }
 

@@ -1,9 +1,9 @@
 import React from "react";
-import { AreaEntity } from "../../types/area";
+import { AreaEntity } from "../../../types/area";
 import "./Areas-list.scss";
 import { Link } from "react-router-dom";
-import { SingleAreaView } from "../../views/Warehouse-view/Single-area-view/Single-area-view";
-import { Btn } from "../common/Btn";
+import { SingleAreaView } from "../../../views/Warehouse-view/Single-area-view/Single-area-view";
+import { Btn } from "../../common/Btn/Btn";
 
 interface Props {
   areas: AreaEntity[];

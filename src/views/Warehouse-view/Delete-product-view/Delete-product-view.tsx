@@ -13,7 +13,6 @@ export const DeleteProductView = () => {
     if (productId) {
       (async () => {
         const data = await getProduct(productId);
-        console.log(data);
         setProduct(data);
       })();
     }

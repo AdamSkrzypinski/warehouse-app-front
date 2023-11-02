@@ -4,7 +4,7 @@ import { apiUrl } from "../../../config/api";
 import { Link, useParams } from "react-router-dom";
 import { SinglePlaceView } from "../Single-place-view/Single-place-view";
 import { WarehouseView } from "../Warehouse-view";
-import { Btn } from "../../../components/common/Btn";
+import { Btn } from "../../../components/common/Btn/Btn";
 
 export const SingleAreaView = () => {
   const [area, setArea] = useState<AreaEntityWithRelations | null>(null);
