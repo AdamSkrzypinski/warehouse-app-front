@@ -3,7 +3,7 @@ import { PlaceEntityWithRelations } from "../../../types/place";
 import { Link, useParams } from "react-router-dom";
 import { apiUrl } from "../../../config/api";
 import "./single-place-view.scss";
-import { SingleProductView } from "../Single-product-view/Single-product-view";
+import { SingleProductView } from "../../Product-view/Single-product-view/Single-product-view";
 import { Btn } from "../../../components/common/Btn/Btn";
 
 export const SinglePlaceView = () => {
