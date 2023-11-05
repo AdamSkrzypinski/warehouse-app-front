@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import "./Add-product-view.scss";
 import {CreateProductDto} from "../../../types/product";
 import {Spinner} from "../../../components/common/Spinner/Spinner";
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
 import {apiUrl} from "../../../config/api";
 import {LocationSelect} from "../../../components/Warehouse/Location-select/Location-select";
 
@@ -49,6 +48,7 @@ export const AddProductView = () => {
         if (
             product.name.length > 2 &&
             product.name.length < 70 &&
+            product.count !== '' &&
             product.count < 999999 &&
             product.measure.length > 1 &&
             product.measure.length < 15

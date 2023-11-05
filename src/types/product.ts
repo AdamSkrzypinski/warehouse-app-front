@@ -13,14 +13,14 @@ export interface ProductEntityWithRelations extends ProductEntity {
 
 export interface CreateProductDto {
   name: string;
-  count: number;
+  count: number | "";
   measure: string;
 }
 
 export interface UpdateProductDto {
   id: string;
   name: string;
-  count: number;
+  count: number | '';
   measure: string;
   productAreaId: string;
   productPlaceId: string;

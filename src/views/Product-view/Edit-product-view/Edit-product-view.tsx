@@ -6,6 +6,7 @@ import {UpdateProductDto} from "../../../types/product";
 import './Edit-product-view.scss'
 import {AreaEntity} from "../../../types/area";
 import {PlaceEntity} from "../../../types/place";
+import {Spinner} from "../../../components/common/Spinner/Spinner";
 
 export const EditProductView = () => {
     const {productId} = useParams()
@@ -20,8 +21,8 @@ export const EditProductView = () => {
 
     const [areasList, setAreasList] = useState<AreaEntity[] | []>([]);
     const [placesList, setPlacesList] = useState<PlaceEntity[] | []>([])
-    console.log(productToEdit)
-
+    const [loading, setLoading] = useState<boolean>(false);
+    const [confirmArea, setConfirmArea] = useState<boolean>(false)
 
 
     const [btnDisabled, setBtnDisabled] = useState<boolean>(true)
@@ -37,8 +38,6 @@ export const EditProductView = () => {
                     count: data.count,
                     measure: data.measure,
                     productPlaceId: data.productPlace.id
-
-
                 });
             })();
         }
@@ -54,7 +53,6 @@ export const EditProductView = () => {
         } catch (err) {
             console.log(err);
         }
-
     }, [productToEdit]);
 
     useEffect(() => {
@@ -69,6 +67,23 @@ export const EditProductView = () => {
         }
 
     }, [productToEdit, areasList]);
+
+    useEffect(() => {
+        if (
+            productToEdit.name.length > 2 &&
+            productToEdit.name.length < 70 &&
+            productToEdit.count !== '' &&
+            productToEdit.count < 999999 &&
+            productToEdit.measure.length > 1 &&
+            productToEdit.measure.length < 15 &&
+            productToEdit.productPlaceId !== '' &&
+            productToEdit.productAreaId !== ''
+        ) {
+            setBtnDisabled(false);
+        } else {
+            setBtnDisabled(true);
+        }
+    }, [productToEdit]);
 
     const change = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (productToEdit !== undefined) {
@@ -96,8 +111,41 @@ export const EditProductView = () => {
     }
 
 
-    const sendForm = () => {
+    const sendForm = async (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const res = await fetch(`${apiUrl}/product/`, {
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    count: productToEdit.count,
+                    measure: productToEdit.measure,
+                    name: productToEdit.name,
+                    productPlaceId: productToEdit.productPlaceId,
+                    productAreaId: productToEdit.productAreaId,
+                    id: productToEdit.id,
+                }),
+            });
+            const data = await res.json();
+            if (data.id) {
+                console.log('ok')
+                setConfirmArea(true)
+            }
+        } finally {
+            setLoading(false);
+        }
+    }
 
+    if (loading) {
+        return <Spinner/>;
+    }
+
+    if (confirmArea) {
+        return <div className={'confirm-area'}>
+            <h2>pomyślnie zapisano!</h2>
+            <Btn text={"wstecz"} to={`/warehouse/${productId}`}/>
+        </div>
     }
 
 

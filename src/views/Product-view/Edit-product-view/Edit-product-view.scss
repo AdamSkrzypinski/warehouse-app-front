@@ -1,6 +1,10 @@
 @import "src/scss/colors";
 
-.edit-product {
+.confirm-area {
+  margin-top: 10em;
+}
+
+.edit-product, .confirm-area {
   display: flex;
   justify-content: center;
   flex-direction: column;
