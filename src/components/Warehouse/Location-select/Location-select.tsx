@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
-import {AreaEntity} from "../../../../types/area";
-import {apiUrl} from "../../../../config/api";
+import {AreaEntity} from "../../../types/area";
+import {apiUrl} from "../../../config/api";
 import "./Location-select.scss";
-import {PlaceEntity} from "../../../../types/place";
-import {Spinner} from "../../../common/Spinner/Spinner";
-import {CreateProductDto} from "../../../../types/product";
+import {PlaceEntity} from "../../../types/place";
+import {Spinner} from "../../common/Spinner/Spinner";
+import {CreateProductDto} from "../../../types/product";
 import { useNavigate} from "react-router-dom";
 
 interface Props {
@@ -24,12 +24,10 @@ export const LocationSelect = (props: Props) => {
 
     const [loading, setLoading] = useState<boolean>(false);
 
-    const [locationChangeConfirm, setLocationChangeConfirm] = useState<boolean>(false)
-
     const navigate = useNavigate()
 
 
-    console.log(selectedPlace)
+
     useEffect(() => {
         try {
             (async () => {
@@ -120,7 +118,7 @@ export const LocationSelect = (props: Props) => {
             <div className={'place-select'}>
                 <form>
                     <label>
-                        Strefa:
+                        Miejsce:
                         <select
                             name="place"
                             id="place"

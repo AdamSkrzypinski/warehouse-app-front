@@ -17,3 +17,11 @@ export interface CreateProductDto {
   measure: string;
 }
 
+export interface UpdateProductDto {
+  id: string;
+  name: string;
+  count: number;
+  measure: string;
+  productAreaId: string;
+  productPlaceId: string;
+}

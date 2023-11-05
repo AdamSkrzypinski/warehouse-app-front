@@ -1,7 +1,8 @@
-@import "src/scss/colors";
+@import "../../../scss/colors";
 
 .location-select {
   margin-top: 4em;
+  position: relative;
 
   .disabled-area {
     position: absolute;

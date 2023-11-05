@@ -49,7 +49,6 @@ export const SingleProductView = () => {
           method: "DELETE",
         });
         const data = await res.json();
-        console.log(data);
         setConfirmWindow(true);
       })();
     } catch (error) {
@@ -94,7 +93,7 @@ export const SingleProductView = () => {
       <div className="btns">
         <div className="action-btns">
           <button onClick={(e) => openDialog(e)}>usuń</button>
-          <Btn text={"Usuń"} />
+          <Btn text={"edytuj"} to={`/product/edit/${productId}`} />
         </div>
         <div className="navigation-btns">
           <Btn text={"wstecz"} to={`/warehouse/place/${productPlace.id}`} />

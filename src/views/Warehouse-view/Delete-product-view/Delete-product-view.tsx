@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductEntity } from "../../../types/product";
-import { getProduct } from "../../../scss/utils/getProduct";
+import { getProduct } from "../../../utils/getProduct";
 import { apiUrl } from "../../../config/api";
 
 export const DeleteProductView = () => {

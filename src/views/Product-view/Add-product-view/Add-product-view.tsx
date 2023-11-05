@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
-import "./Add-product-vew.scss";
+import "./Add-product-view.scss";
 import {CreateProductDto} from "../../../types/product";
 import {Spinner} from "../../../components/common/Spinner/Spinner";
 import {keyboard} from "@testing-library/user-event/dist/keyboard";
 import {apiUrl} from "../../../config/api";
-import {LocationSelect} from "../../../components/Warehouse/Areas-list/Location-select/Location-select";
+import {LocationSelect} from "../../../components/Warehouse/Location-select/Location-select";
 
 export const AddProductView = () => {
     const [product, setProduct] = useState<CreateProductDto>({
