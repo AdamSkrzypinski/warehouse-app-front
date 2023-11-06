@@ -61,14 +61,14 @@
         border: transparent;
         box-shadow: $primary 0 0 1px 0px;
         transition: box-shadow 0.3s;
-
-
       }
-    }
+
+   }
 
     .disabled {
       background-color: gray;
       color: $primary;
+      pointer-events: none;
     }
 
     .info {
