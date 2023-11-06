@@ -4,7 +4,7 @@ import { apiUrl } from "../../../config/api";
 import { ProductEntityWithRelations } from "../../../types/product";
 import "./Single-product-view.scss";
 import { Btn } from "../../../components/common/Btn/Btn";
-import { OneProduct } from "../../../components/Product/One-product";
+import { OneProduct } from "../../../components/Product/One-product/One-product";
 
 export const SingleProductView = () => {
   const [product, setProduct] = useState<ProductEntityWithRelations | null>(

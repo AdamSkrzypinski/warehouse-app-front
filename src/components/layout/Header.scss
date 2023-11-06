@@ -39,6 +39,10 @@ header {
     justify-content: flex-end;
     margin-right: 1em;
 
+    a{
+      text-shadow: none;
+    }
+
     input {
       background-color: transparent;
       font-size: 1.6rem;

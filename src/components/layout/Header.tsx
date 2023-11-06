@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import { SearchInput } from "../Product/Search-input/Search-input";
 
 export const Header = () => {
   return (
@@ -12,12 +13,7 @@ export const Header = () => {
           Warehouse<span>App</span>
         </h1>
       </Link>
-      <div className={"search"}>
-        <input type="text" />
-        <button>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-        </button>
-      </div>
+      <SearchInput />
     </header>
   );
 };

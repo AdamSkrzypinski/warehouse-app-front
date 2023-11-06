@@ -13,6 +13,7 @@ import { AddProductView } from "./views/Product-view/Add-product-view/Add-produc
 import { AddConfirmView } from "./views/Product-view/Add-confirm-view/Add-confirm-view";
 import { EditProductView } from "./views/Product-view/Edit-product-view/Edit-product-view";
 import { AddLocation } from "./views/Warehouse-view/Add-location-view/Add-location";
+import { SearchView } from "./views/Product-view/Search-view/Search-view";
 
 export const App = () => {
   return (
@@ -31,6 +32,7 @@ export const App = () => {
         <Route path={"/add-product/confirm"} element={<AddConfirmView />} />
         <Route path={"product/edit/:productId"} element={<EditProductView />} />
         <Route path={"add-location"} element={<AddLocation />} />
+        <Route path={"search/:value"} element={<SearchView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>
