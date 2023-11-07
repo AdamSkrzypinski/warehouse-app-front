@@ -3,23 +3,34 @@ import { AreaEntityWithRelations } from "../../../types/area";
 import { apiUrl } from "../../../config/api";
 import { Link, useParams } from "react-router-dom";
 import { SinglePlaceView } from "../Single-place-view/Single-place-view";
-import { WarehouseView } from "../Warehouse-view";
 import { Btn } from "../../../components/common/Btn/Btn";
+import { Spinner } from "../../../components/common/Spinner/Spinner";
 
 export const SingleAreaView = () => {
   const [area, setArea] = useState<AreaEntityWithRelations | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const { areaId } = useParams();
 
   useEffect(() => {
     if (areaId) {
-      (async () => {
-        const res = await fetch(`${apiUrl}/location/area/${areaId}`);
-        const data = await res.json();
-        setArea(data);
-      })();
+      setLoading(true);
+      try {
+        (async () => {
+          const res = await fetch(`${apiUrl}/location/area/${areaId}`);
+          const data = await res.json();
+          setArea(data);
+          setLoading(false);
+        })();
+      } finally {
+        setLoading(false);
+      }
     }
   }, []);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   if (area === null) {
     return null;

@@ -5,21 +5,33 @@ import { apiUrl } from "../../../config/api";
 import "./single-place-view.scss";
 import { SingleProductView } from "../../Product-view/Single-product-view/Single-product-view";
 import { Btn } from "../../../components/common/Btn/Btn";
+import { Spinner } from "../../../components/common/Spinner/Spinner";
 
 export const SinglePlaceView = () => {
   const [place, setPlace] = useState<PlaceEntityWithRelations | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const { placeId } = useParams();
 
   useEffect(() => {
     if (placeId) {
-      (async () => {
-        const res = await fetch(`${apiUrl}/location/place/${placeId}`);
-        const data = await res.json();
-        setPlace(data);
-      })();
+      setLoading(true);
+      try {
+        (async () => {
+          const res = await fetch(`${apiUrl}/location/place/${placeId}`);
+          const data = await res.json();
+          setPlace(data);
+          setLoading(false);
+        })();
+      } finally {
+        setLoading(false);
+      }
     }
   }, []);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   if (place === null) {
     return null;

@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set REACT_APP_API_URL=/mapApi&& react-scripts build",
+    "build": "set REACT_APP_API_URL=/warehousev2&& react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

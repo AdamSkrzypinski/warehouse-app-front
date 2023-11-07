@@ -11,7 +11,7 @@ export const AddPlaceView = (props: Props) => {
   const [placeName, setPlaceName] = useState<string>("");
   const [areasList, setAreasList] = useState<AreaEntity[] | []>([]);
   const [selectedArea, setSelectedArea] = useState(
-    "3757d482-9c65-4e90-a549-effe6209fcb1",
+    "641721ab-1ed5-4278-a4d2-c498fd893940",
   );
   const [addPlaceBtnDisabled, setAddPlaceBtnDisabled] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
