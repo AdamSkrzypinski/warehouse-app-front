@@ -5,7 +5,6 @@ import { ProductEntityWithRelations } from "../../../types/product";
 import "./Single-product-view.scss";
 import { Btn } from "../../../components/common/Btn/Btn";
 import { OneProduct } from "../../../components/Product/One-product/One-product";
-import { Spinner } from "../../../components/common/Spinner/Spinner";
 
 export const SingleProductView = () => {
   const [product, setProduct] = useState<ProductEntityWithRelations | null>(
@@ -13,29 +12,21 @@ export const SingleProductView = () => {
   );
   const [dialogWindow, setDialogWindow] = useState<boolean>(false);
   const [confirmWindow, setConfirmWindow] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
 
   const { productId } = useParams();
 
   useEffect(() => {
     if (productId) {
-      setLoading(true);
       try {
         (async () => {
           const res = await fetch(`${apiUrl}/product/${productId}`);
           const data = await res.json();
           setProduct(data);
-          setLoading(false);
         })();
       } finally {
-        setLoading(false);
       }
     }
   }, []);
-
-  if (loading) {
-    return <Spinner />;
-  }
 
   if (product === null) {
     return null;

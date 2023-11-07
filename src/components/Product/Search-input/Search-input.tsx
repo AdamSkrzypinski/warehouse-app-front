@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Btn } from "../../common/Btn/Btn";
 
 export const SearchInput = () => {
   const [searchValue, setSearchValue] = useState<string>("");
-  const navigate = useNavigate();
-
-  const redirect = () => {
-    navigate("/");
-    navigate(`/search/${searchValue}`);
-  };
 
   return (
     <div className={"search"}>

@@ -8,7 +8,7 @@ import { SingleAreaView } from "./views/Warehouse-view/Single-area-view/Single-a
 import { NotFoundView } from "./views/Not-found-view/Not-found-view";
 import { SingleProductView } from "./views/Product-view/Single-product-view/Single-product-view";
 import { SinglePlaceView } from "./views/Warehouse-view/Single-place-view/Single-place-view";
-import { DeleteProductView } from "./views/Warehouse-view/Delete-product-view/Delete-product-view";
+
 import { AddProductView } from "./views/Product-view/Add-product-view/Add-product-view";
 import { AddConfirmView } from "./views/Product-view/Add-confirm-view/Add-confirm-view";
 import { EditProductView } from "./views/Product-view/Edit-product-view/Edit-product-view";
