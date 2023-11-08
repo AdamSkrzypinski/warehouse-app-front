@@ -23,10 +23,11 @@ export const SingleProductView = () => {
           const data = await res.json();
           setProduct(data);
         })();
-      } finally {
+      } catch (error) {
+        throw error;
       }
     }
-  }, []);
+  }, [productId]);
 
   if (product === null) {
     return null;

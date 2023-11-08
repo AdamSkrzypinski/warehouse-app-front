@@ -7,16 +7,11 @@ export const WarehouseView = () => {
   const [areasList, setAreasList] = useState<AreaEntity[]>([]);
 
   useEffect(() => {
-    try {
-      (async () => {
-        const res = await fetch(`${apiUrl}/location/area`);
-        const data = await res.json();
-        setAreasList(data);
-        setLoading(false);
-      })();
-    } finally {
-      setLoading(false);
-    }
+    (async () => {
+      const res = await fetch(`${apiUrl}/location/area`);
+      const data = await res.json();
+      setAreasList(data);
+    })();
   }, []);
 
   return (

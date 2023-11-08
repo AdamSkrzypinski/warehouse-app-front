@@ -22,7 +22,7 @@ export const SinglePlaceView = () => {
       } finally {
       }
     }
-  }, []);
+  }, [placeId]);
 
   if (place === null) {
     return null;

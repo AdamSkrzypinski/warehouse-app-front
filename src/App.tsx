@@ -14,6 +14,7 @@ import { AddConfirmView } from "./views/Product-view/Add-confirm-view/Add-confir
 import { EditProductView } from "./views/Product-view/Edit-product-view/Edit-product-view";
 import { AddLocation } from "./views/Warehouse-view/Add-location-view/Add-location";
 import { SearchView } from "./views/Product-view/Search-view/Search-view";
+import { InventoryView } from "./views/Inventory-view/Inventory-view";
 
 export const App = () => {
   return (
@@ -30,9 +31,13 @@ export const App = () => {
         <Route path={"/warehouse/:productId"} element={<SingleProductView />} />
         <Route path={"/add-product"} element={<AddProductView />} />
         <Route path={"/add-product/confirm"} element={<AddConfirmView />} />
-        <Route path={"product/edit/:productId"} element={<EditProductView />} />
-        <Route path={"add-location"} element={<AddLocation />} />
-        <Route path={"search/:value"} element={<SearchView />} />
+        <Route
+          path={"/product/edit/:productId"}
+          element={<EditProductView />}
+        />
+        <Route path={"/add-location"} element={<AddLocation />} />
+        <Route path={"/search/:value"} element={<SearchView />} />
+        <Route path={"/inventory"} element={<InventoryView />} />
 
         <Route path="*" element={<NotFoundView />} />
       </Routes>

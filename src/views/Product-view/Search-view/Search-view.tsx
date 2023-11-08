@@ -11,24 +11,15 @@ export const SearchView = () => {
   const { value } = params;
   const [searchResult, setSearchResult] = useState<ProductEntity[]>([]);
 
-  console.log(searchResult);
-  console.log(params);
-
   useEffect(() => {
     if (value) {
-      setLoading(true);
-      try {
-        (async () => {
-          const res = await fetch(`${apiUrl}/product/search/${value}`);
-          const data = await res.json();
-          setSearchResult(data);
-          setLoading(false);
-        })();
-      } finally {
-        setLoading(false);
-      }
+      (async () => {
+        const res = await fetch(`${apiUrl}/product/search/${value}`);
+        const data = await res.json();
+        setSearchResult(data);
+      })();
     }
-  }, [params]);
+  }, [params, value]);
 
   if (searchResult.length === 0) {
     return null;

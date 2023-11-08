@@ -21,7 +21,7 @@ export const SingleAreaView = () => {
       } finally {
       }
     }
-  }, []);
+  }, [areaId]);
 
   if (area === null) {
     return null;
