@@ -1,46 +1,108 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Warehouse-App
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### `npm test`
+[![Product Name Screen Shot][product-screenshot]](https://nuidzruvvg.cfolks.pl/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A simple warehouse management application. Under construction, details in Roadmap.
 
-### `npm run build`
+<!-- DEMO -->
+## Demo
+[Warehouse-App]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Backend Repository -->
+## Backend Repository
+https://github.com/AdamSkrzypinski/warehouse-app-back
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ROADMAP -->
+## Roadmap
 
-### `npm run eject`
+- [x] Add/delete/edit/move product
+- [x] Add location
+- [x] Search product
+- [ ] User login/ registration module
+- [ ] Stocktaking module
+- [ ] History module
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+### Built With
+
+
+* [![React][React.js]][React-url]
+* [![Typescript][Typescript]][Typescript-url]
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/AdamSkrzypinski/warehouse-app-front.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run 
+   ```sh
+    react-scripts start
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+## Contact
+
+adamskrzy@gmail.com
+
+Project Link: [https://github.com/AdamSkrzypinski/warehouse-app-front](https://github.com/AdamSkrzypinski/warehouse-app-front)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+
+[product-screenshot]: ezgif-3-d4a511a790.gif
+[Warehouse-App]:
+https://nuidzruvvg.cfolks.pl/
+[Typescript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square]
+[Typescript-url]: https://www.typescriptlang.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+
