@@ -1,0 +1,63 @@
+@import "../../../scss/colors";
+
+.product-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 1.8rem;
+  color: $primary;
+
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5em;
+
+    .action-btns, .navigation-btns {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .navigation-btns {
+      margin-top: 10em;
+    }
+
+
+  }
+
+}
+
+.dialog-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $background;
+
+  .text-section {
+    margin-top: 5em;
+
+
+    p {
+      padding: 1em;
+      font-size: 2em;
+      color: $primary;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+
+      button{
+        margin-left: 2em;
+      }
+    }
+  }
+
+
+}

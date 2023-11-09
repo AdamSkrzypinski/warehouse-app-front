@@ -1,0 +1,45 @@
+@import "../../../scss/colors";
+
+.areas {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: $primary;
+
+
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+
+  }
+
+  .areas-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+
+    a {
+      margin: 0.3em;
+      padding: 0.5em;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: $primary;
+      text-transform: uppercase;
+      box-shadow: $primary 0 0 1px 0px;
+
+      &:hover{
+        box-shadow: $primary 0 0 1px 1px;
+        background-color: $background-hover;
+
+      }
+    }
+  }
+
+
+}

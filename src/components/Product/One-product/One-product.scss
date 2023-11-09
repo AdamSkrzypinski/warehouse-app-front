@@ -1,0 +1,13 @@
+@import "../../../scss/colors";
+
+
+th, td {
+  padding: 0.5em 0.8em;
+  background-color: $background-hover;
+  margin-bottom: 0.5em;
+}
+td{
+  text-align: center;
+  font-weight: bold;
+}
+
