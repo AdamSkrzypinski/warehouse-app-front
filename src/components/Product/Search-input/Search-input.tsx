@@ -18,7 +18,10 @@ export const SearchInput = () => {
             maxLength={20}
           />
         </label>
-        <Btn text={"szukaj"} to={`/search/${searchValue}`} />
+        <Btn
+          text={"szukaj"}
+          to={`/search/${searchValue.length < 3 ? "undefined" : searchValue}`}
+        />
       </form>
     </div>
   );

@@ -21,8 +21,26 @@ export const SearchView = () => {
     }
   }, [params, value]);
 
+  if (value && value == "undefined") {
+    return (
+      <>
+        <div className={"search-result"}>
+          <h2>Musisz podać conajmniej 3 znaki!</h2>
+          <Btn text={"Strona główna"} to={"/"} />
+        </div>
+      </>
+    );
+  }
   if (searchResult.length === 0) {
-    return null;
+    return (
+      <>
+        <div className={"search-result"}>
+          <h2>Wyniki wyszukiwania</h2>
+          <h3>Niestety, nic nie znaleziono...</h3>
+          <Btn text={"Strona główna"} to={"/"} />
+        </div>
+      </>
+    );
   }
 
   return (

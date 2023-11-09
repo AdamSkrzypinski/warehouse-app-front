@@ -34,6 +34,7 @@ A simple warehouse management application. Under construction, details in Roadma
 
 * [![React][React.js]][React-url]
 * [![Typescript][Typescript]][Typescript-url]
+* [![Sass][Sass]][Sass-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -92,8 +93,10 @@ Project Link: [https://github.com/AdamSkrzypinski/warehouse-app-front](https://g
 [product-screenshot]: ezgif-3-d4a511a790.gif
 [Warehouse-App]:
 https://nuidzruvvg.cfolks.pl/
-[Typescript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square]
+[Typescript]:  	https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/
+[Sass]: https://res.cloudinary.com/practicaldev/image/fetch/s--Dsy2kaod--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://img.shields.io/badge/Saas-CC6699%3Fstyle%3Dfor-the-badge%26logo%3Dsass%26logoColor%3Dwhite
+[Sass-url]: https://sass-lang.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 
