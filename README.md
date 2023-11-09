@@ -1,6 +1,7 @@
 
 
 # Warehouse-App
+### (Frontend Repository)
 
 
 
@@ -12,16 +13,10 @@
 
 A simple warehouse management application. Under construction, details in Roadmap.
 
-<!-- DEMO -->
 ## Demo
 [Warehouse-App]
 
 
-<!-- Backend Repository -->
-## Backend Repository
-https://github.com/AdamSkrzypinski/warehouse-app-back
-
-<!-- ROADMAP -->
 ## Roadmap
 
 - [x] Add/delete/edit/move product
@@ -33,12 +28,6 @@ https://github.com/AdamSkrzypinski/warehouse-app-back
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
 
 ### Built With
 
@@ -71,6 +60,8 @@ https://github.com/AdamSkrzypinski/warehouse-app-back
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Backend Repository Link
+https://github.com/AdamSkrzypinski/warehouse-app-back
 
 
 
